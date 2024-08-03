@@ -1,0 +1,718 @@
+:root {
+    --font-family: "Roboto", sans-serif;
+    --second-family: "Raleway", sans-serif;
+    --iris: #4d5ae5;
+    --ocean: #404bbf;
+    --navy-blue: #2e2f42;
+    --green: #31d0aa;
+    --slate: #434455;
+    --light-slate: #8e8f99;
+    --cornflower: #e7e9fc;
+    --cloud: #f4f4fd;
+    --navy-blue-modal: rgba(46, 47, 66, 0.4);
+    --grey: rgba(46, 47, 66, 0.7);
+    --white: #fff;
+    --dairy: #fcfcfc;
+}
+
+
+body {
+    font-family: var(--font-family);
+    color: var(--slate);
+    background-color: var(--white);
+    color: var(--slate);
+}
+
+/* ---------Genel Class Stilleri --------- */
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    padding: 120px 0px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* --------- Tüm Textler için Ortak Stiller --------- */
+.text {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+}
+
+/* --------- Tüm H2ler için Ortak Stiller --------- */
+.section-second-title,
+.section-third-title,
+.section-fourth-title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--navy-blue);
+    margin-bottom: 72px;
+}
+
+/* --------- Tüm H3ler için Ortak Stiller --------- */
+.subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+    margin-bottom: 8px;
+}
+
+/* --------- HEADER KISMI Stiller --------- */
+.header-content {
+    border-bottom: 1px solid var(--cornflower);
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header-menu-ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header-menu-list {
+    padding: 24px 0;
+}
+
+.header-address {
+    display: flex;
+    align-items: center;
+}
+
+.header-address-ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header-list-link {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+    padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-menu-ul .header-menu-list:first-child .header-list-link {
+    position: relative;
+}
+
+.header-menu-ul .header-menu-list:first-child .header-list-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--ocean);
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+}
+
+.header-address-link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+    padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-list-link:hover,
+.header-list-link:active,
+.header-list-link:focus,
+.header-address-link:hover,
+.header-address-link:focus,
+.header-address-link:active {
+    color: var(--ocean);
+}
+
+.logo {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 117%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--iris);
+    margin-right: 76px;
+}
+
+.header-logo {
+    color: var(--navy-blue);
+}
+
+.header-menu-ul .header-menu-list:first-child .header-list-link {
+    color: var(--ocean);
+}
+
+/* --------- MAIN KISMI Stiller --------- */
+.section-hero {
+    background: var(--navy-blue);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Background-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1440px;
+    max-height: 600px;
+    margin: 0 auto;
+    padding: 188px 0;
+}
+
+/* HERO SECTİON KISMI STİLLER */
+.hero-title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 107%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--white);
+    max-width: 496px;
+}
+
+.hero-btn {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    background-color: var(--iris);
+    cursor: pointer;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: #404BBF;
+    color: #FFFFFF;
+}
+
+/* SECTİON SECOND KISMI STİLLER */
+.section-second-container {
+    display: flex;
+    justify-content: center;
+}
+
+.section-second-ul {
+    display: flex;
+    gap: 24px;
+    color: var(--white);
+}
+
+.section-second-list {
+    width: calc((100% - 72px)/4);
+    max-width: 264px;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    background-color: var(--cloud);
+    border-radius: 4px;
+    border: 1px solid var(--light-slate);
+    margin-bottom: 8px;
+}
+
+/* SECTİON THİRD KISMI STİLLER */
+.section-third {
+    background-color: var(--cloud);
+}
+
+.section-third-ul {
+    display: flex;
+    gap: 24px;
+}
+
+.section-third-list {
+    width: calc((100% - 72px)/4);
+    max-width: 264px;
+    background-color: var(--white);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.section-third-card-wrap {
+    padding: 32px 0;
+    text-align: center;
+}
+
+.social-media-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+}
+
+.social-media-item {
+    width: 40px;
+    height: 40px;
+}
+
+.social-media-item-link {
+    width: 100%;
+    height: 100%;
+    background-color: var(--iris);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-media-item-link:hover,
+.social-media-item-link:focus {
+    background-color: var(--ocean);
+}
+
+.social-media-item-link svg {
+    fill: var(--cloud);
+}
+
+/* SECTİON FOURTH KISMI STİLLER */
+.section-fourth-ul {
+    background-color: var(--white);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.section-fourth-list {
+    width: calc((100% - 48px)/3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-fourth-card-wrap {
+    border: 1px solid var(--cornflower);
+    border-top: none;
+    padding: 32px 16px;
+    margin-bottom: 8px;
+}
+
+.overplay {
+    position: relative;
+    overflow: hidden;
+}
+
+.overplay-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px;
+    top: 0;
+    color: var(--cloud);
+    background-color: var(--iris);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-fourth-list:hover .overplay-text {
+    transform: translateY(0%);
+}
+
+.section-fourth-list:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+/* FOOTER KISMI BURADA */
+.footer-content {
+    background-color: var(--navy-blue);
+    padding: 100px 0;
+}
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    margin-right: 120px;
+}
+
+.footer-logo-wrapper {
+    margin-right: 120px;
+}
+
+.footer-content .logo {
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.footer-logo {
+    color: var(--cloud);
+}
+
+.footer-content .text {
+    color: var(--cloud);
+    max-width: 264px;
+}
+
+.footer-social-media-list {
+    display: flex;
+    gap: 16px;
+    height: 40px;
+    width: 208px;
+}
+
+.footer-social-media-item {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-social-media-item-link {
+    width: 100%;
+    height: 100%;
+    background-color: var(--iris);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-media-text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.icon-instagram,
+.icon-twitter,
+.icon-facebook,
+.icon-linkedin {
+    fill: var(--cloud);
+}
+
+.footer-social-media-item-link:hover,
+.footer-social-media-item-link:focus {
+    background-color: var(--green);
+}
+
+/* Footer Content Classları */
+.footer-input-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
+
+/* Footer Text Classı */
+.footer-input-text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+/* Footer İnput ve Buton Classları */
+.footer-input-form {
+    display: flex;
+    gap: 24px;
+
+}
+
+.footer-input {
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    background-color: transparent;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 200%;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    padding-left: 16px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.footer-input:hover,
+.footer-input:focus,
+.footer-input:active {
+    border: 1px solid var(--ocean);
+}
+
+.footer-input-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 165px;
+    border-radius: 4px;
+    padding: 8px 24px;
+    height: 40px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: var(--white);
+    background: var(--iris);
+    border: none;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-btn-icon {
+    margin-left: 16px;
+}
+
+.footer-input-btn:hover,
+.footer-input-btn:focus .footer-input-btn:active {
+    background-color: var(--ocean);
+}
+
+/* MODAL WİNDOW CLASSLARI BAŞLAMAKTADIR. */
+.modal-window-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--navy-blue-modal);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    min-height: 584px;
+    background: var(--dairy);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px;
+}
+
+.modal-exit-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--cornflower);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-exit-btn:hover,
+.modal-exit-btn:focus {
+    border: none;
+    background-color: var(--ocean);
+}
+
+.icon-exit {
+    fill: var(--navy-blue);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-exit-btn:hover .icon-exit,
+.modal-exit-btn:focus .icon-exit {
+    fill: var(--white);
+}
+
+.modal-container-text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--navy-blue);
+    margin-bottom: 16px;
+}
+
+/* Modal Windows İnput Classları */
+.modal-form-content {
+    margin-bottom: 8px;
+}
+
+.form-label {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: 0.04em;
+    color: var(--light-slate);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.modal-input-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-input {
+    border: 1px solid var(--navy-blue-modal);
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 38px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:hover,
+.modal-input:focus {
+    border-color: var(--iris);
+}
+
+.modal-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--navy-blue);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:hover+.modal-icon,
+.modal-input:focus+.modal-icon {
+    fill: var(--iris);
+}
+
+.textarea-content {
+    margin-bottom: 16px;
+}
+
+.textarea-input {
+    width: 100%;
+    height: 120px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: 0.04em;
+    color: var(--navy-blue-modal);
+    resize: none;
+    padding: 8px 16px;
+}
+
+.checkbox-content {
+    margin-bottom: 24px;
+}
+
+.modal-checkbox {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    fill: transparent;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visually-hidden-checkbox:checked+.checkbox-label .modal-checkbox {
+    border: none;
+    background-color: var(--ocean);
+    fill: var(--cloud);
+}
+
+.checkbox-text {
+    color: var(--iris);
+    text-decoration: underline;
+}
+
+.form-btn {
+    display: block;
+    border-radius: 4px;
+    padding: 16px 32px;
+    min-width: 169px;
+    height: 56px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: var(--iris);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-btn:hover,
+.form-btn:focus {
+    background-color: var(--ocean);
+}
